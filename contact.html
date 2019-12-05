@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Home</title>
+      <link rel="stylesheet" href="css/reset.css">
+      <link rel="stylesheet" href="css/main.css">
+  </head>    
+  <body>
+    <div class="container">
+      <header>
+          <a href="index.html">
+          <img class="main-logo" src="img/logo.svg" alt="logo">
+          </a>
+          <nav class="navigation">
+            <ul class="nav-ul"> 
+              <li class="nav-li">
+                <a class="nav-a" href="index.html"> Home </a>
+              </li>
+              <li class="nav-li">
+                  <a class="nav-a" href="news.html"> News </a>
+              </li>
+              <li class="nav-li">
+                  <a class="nav-a" href="contact.html"><span class="nav-active"
+                  > Contact </span> </a>
+              </li>
+            </ul>
+          </nav>
+      </header>
+
+        <article class="art-cont">
+          <div class="article-h-p">
+            <h3 class="article-h"> Contact Information: </h3>
+            <p class="article-p"> 
+              <span class="lighter"> Addres :</span>
+              <span class="color-p"> Petriashvili Street 30 </span> 
+            </p>
+            <p class="article-p"> 
+              <span class="lighter"> Number : </span>
+              <span class="color-p">  +995 555 777 777 </span> 
+            </p>
+            <p class="article-p"> 
+              <span class="lighter"> Mail : </span>
+              <span class="color-p">  Mail@gmail.com </span> 
+            </p>
+          </div
+          ><div class="cont-map">
+             <!--The div element for the map -->
+             <div id="map"></div>
+             <script>
+              // Initialize and add the map
+                function initMap() {
+                // The location of Uluru
+                var uluru = {lat: -25.344, lng: 131.036};
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 4, center: uluru});
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({position: uluru, map: map});
+                }
+            </script>
+                <!--Load the API from the specified URL
+                * The async attribute allows the browser to render the page while the API loads
+                * The key parameter will contain your own API key (which is not needed for this tutorial)
+                * The callback parameter executes the initMap() function
+                -->
+                <script async defer
+                   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD9vfTRB5wE2I4lri6hSvxC-xdGPBjkYw&callback=initMap">
+                </script>
+          </div>
+        </article>
+
+          <footer>
+            <img class="logo logo-bord-right" src="img/fb.svg" alt="Facebook">
+            <img class="logo" src="img/yout.svg" alt="youtube">
+        </footer>
+    </div>
+    
+  </body>
+</html>
